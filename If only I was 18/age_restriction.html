@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    body {
+      text-align: center;
+    }
+    input {
+      width: 500px;
+      height: 50px;
+      border-radius: 5px;
+      box-shadow: 3px 3px 5px 6px black;
+    }
+    #results {
+      margin-top: 20px;
+      margin-left: 37%;
+      width: 400px;
+      height: 50px;
+      border-radius: 5px;
+      box-shadow: 3px 3px 5px 6px black;
+    }
+    button {
+      width: 100px;
+      height: 25px;
+      border-radius: 5px;
+    }
+    button:hover {
+      width: 100px;
+      height: 25px;
+      border-radius: 5px;
+      box-shadow: 3px 3px 5px 6px black;
+      background-color: grey;
+    }
+    ::placeholder {
+      font-size: 30px;
+      text-align: center;
+    }
+    .button {
+      margin-top: 30px;
+    }
+
+
+    </style>
+  </head>
+  <body>
+  <div class="">
+    <input id="age" type="text" name="" value="" placeholder="Age">
+  </div>
+  <div id="results">
+    <p></p>
+  </div>
+  <div class="button">
+    <button type="button" name="button" onclick="ages()">Submit</button>
+  </div>
+
+    <script>
+    alert("Enter your age in the provided place");
+
+    function ages(){
+
+      var ageField=document.getElementById("age");
+      var age=ageField.value;
+      var results=document.getElementById("results");
+
+      if (Number(age)===0) {
+        results.innerHTML="Enter your age first...";
+      }else if (age<=12) {
+        results.innerHTML="You're still a baby";
+      }else if (age<=20) {
+        results.innerHTML="You are a teenager now goodluck!";
+      }
+      else if (age<40) {
+        results.innerHTML="You are in the prime of your life.";
+      }
+      else if (age<60) {
+        results.innerHTML="Almost time to retire.";
+      }
+      else if (age>=60&&age<=110) {
+        results.innerHTML="Spend time with family while you can";
+      }
+      else if (age>110) {
+        results.innerHTML="You are dead";
+      }
+    }
+
+    </script>
+  </body>
+</html>
